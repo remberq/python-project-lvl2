@@ -23,7 +23,7 @@ jobs:
       - name: install deps
         run:  |
           python3 -m pip install --upgrade pip
-          pip instal poetry
+          pip install poetry
           pip install -r requirements_dev.txt
       - name: lint
         run: make lint
