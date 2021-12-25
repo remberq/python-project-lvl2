@@ -31,4 +31,6 @@ jobs:
     steps:
       - name: test_check
         run:
+                python3 -m pip install --upgrade pip
+                pip install poetry
                 make pytest
