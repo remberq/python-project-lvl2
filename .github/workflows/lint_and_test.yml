@@ -18,19 +18,15 @@ jobs:
   linter-test:
     runs-on: ubuntu-latest
     steps:
-      - name: linter-check
-        run:
-                python3 -m pip install --upgrade pip
-                pip install poetry
-                make lint
-                
+      - uses: actions/checkout@v2
 
+      - name: install deps
+        run:  |
+          python3 -m pip install --upgrade pip
+          pip instal poetry
+          pip install -r requirements_dev.txt
+      - name: lint
+        run: make lint
+      - name: test
+        run: make pytest
 
-  test:
-    runs-on: ubuntu-latest
-    steps:
-      - name: test_check
-        run:
-                python3 -m pip install --upgrade pip
-                pip install poetry
-                make pytest
