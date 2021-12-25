@@ -2,8 +2,8 @@ gendiff:
 	poetry run gendiff
 install:
 	poetry install
-build:
-	poetry build
+build: check
+	@poetry build
 package-install:
 	python3 -m pip install --user dist/*.whl
 publish:
@@ -14,4 +14,10 @@ lint:
 	poetry run flake8 gendiff
 coverage:
 	poetry run pytest --cov=gendiff --cov-report xml tests/
+selfcheck:
+	poetry check
+check: selfcheck lint
+
+
+
 
