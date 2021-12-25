@@ -30,3 +30,10 @@ jobs:
       - name: test
         run: make pytest
 
+      - name: Test & publish code coverage
+        uses: remberq/codeclimate-action@v3.0.0
+        env:
+          CC_TEST_REPORTER_ID: 6386fd824fcc65e5fd51bc7a072bb5e23ac435046f0b047b33de1aff94799a29
+        with:
+          coverageCommand: npm run coverage
+          debug: true

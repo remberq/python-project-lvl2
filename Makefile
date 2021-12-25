@@ -12,6 +12,6 @@ force:
 	python3 -m pip install --user --force-reinstall dist/*.whl
 lint:
 	poetry run flake8 gendiff
-pytest:
-	poetry run pytest --cov tests/
+coverage:
+	poetry run pytest --cov=gendiff --cov-report xml tests/
 
