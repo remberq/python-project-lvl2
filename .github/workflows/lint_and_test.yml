@@ -28,7 +28,7 @@ jobs:
       - name: lint
         run: make lint
       - name: test
-        run: make pytest
+        run: make coverage
 
       - name: Test & publish code coverage
         uses: paambaati/codeclimate-action@v3.0.0
