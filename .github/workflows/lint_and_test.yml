@@ -32,6 +32,5 @@ jobs:
       - name: test_check
         run:
                 python3 -m pip install --upgrade pip
-                pip install -–upgrade setuptools
                 pip install poetry
-                make test
+                make pytest
