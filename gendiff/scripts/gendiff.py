@@ -3,7 +3,6 @@ import argparse
 from gendiff import generate_diff
 
 
-
 def main():
     parser = argparse.ArgumentParser(description='Generate diff')
     parser.add_argument('-f', '--format', help='ser format of output')
