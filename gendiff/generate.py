@@ -4,8 +4,8 @@ import json
 
 def generate_diff(sorce, sorce2):
 
-    data1 = json.load(open(f'{sorce}'))
-    data2 = json.load(open(f'{sorce2}'))
+    data1 = json.load(open(f'./tests/fixtures/{sorce}'))
+    data2 = json.load(open(f'./tests/fixtures/{sorce2}'))
 
     result = {(key, value) for key, value in data1.items()}
     result2 = {(key, value) for key, value in data2.items()}

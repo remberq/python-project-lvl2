@@ -13,4 +13,4 @@ force:
 lint:
 	poetry run flake8 gendiff
 pytest:
-	poetry run pytest
+	poetry run pytest --cov tests/
