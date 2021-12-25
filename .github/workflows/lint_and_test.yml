@@ -20,6 +20,7 @@ jobs:
     steps:
       - name: linter-check
         run:
+                python3 -m pip install --upgrade pip
                 pip install poetry
                 make lint
                 
@@ -30,6 +31,4 @@ jobs:
     steps:
       - name: test_check
         run:
-                pip install poetry
-                pip install --upgrade pip
                 make test
