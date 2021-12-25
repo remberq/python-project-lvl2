@@ -22,5 +22,13 @@ jobs:
         run:
                 pip install poetry
                 make lint
-                poetry run pytest
+                
 
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: test_check
+        run:
+                pip install poetry
+                make test
