@@ -31,4 +31,5 @@ jobs:
       - name: test_check
         run:
                 pip install poetry
+                python -m pip install --upgrade pip
                 make test
