@@ -22,7 +22,8 @@ jobs:
 
       - name: install deps
         run:  |
-          
+          python3 -m pip install --upgrade pip
+          pip install poetry
           make install
       - name: lint
         run: make lint
